@@ -30,7 +30,6 @@ Template Name: Landing Page
 				?>
 				<div id="landing-top" style="background-image: url('<?php echo $image; ?>');" class="section-background">
 					<section id="top">
-					<div class="wrap"><a href="https://orderup.com/order-online/delivery/fenwicks-300?affiliate_id=653" target="_blank" class="delivery"></a></div>
 						<div class="third-color-back logo-bar">
 							<div class="logo"></div>
 						</div>
