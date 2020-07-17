@@ -30,6 +30,25 @@ Template Name: Landing Page
 				?>
 				<div id="landing-top" style="background-image: url('<?php echo $image; ?>');" class="section-background">
 					<section id="top">
+						<div class="header-buttons" style="padding-top:3em; margin-bottom:-3em;">
+							<?php if(get_field('button_image', 'option') ) : ?>
+								<?php
+									$header_badge = get_field('button_image', 'option');
+									$link = get_field('button_link', 'option');
+									$link_url = $link['url'];
+									$link_title = $link['title'];
+									$link_target = $link['target'] ? $link['target'] : '_self';
+
+									// thumbnail
+									$size = 'large';
+									$thumb = $header_badge['sizes'][ $size ];
+									$width = $header_badge['sizes'][ $size . '-width' ];
+									$height = $header_badge['sizes'][ $size . '-height' ]; ?>
+									<a href="<?php echo esc_url( $link_url ); ?>" title="<?php echo $link_title; ?>" class="header-button" style="text-align:center;display:block;">
+								  	<img src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>" width="<?php echo $width; ?>" height="<?php echo $height; ?>" />
+								  </a>
+						</div>
+						<?php endif; ?>
 						<div class="third-color-back logo-bar">
 							<div class="logo"></div>
 						</div>
